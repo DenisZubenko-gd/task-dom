@@ -37,6 +37,7 @@ export function generateTree(childrenCount, level) {
             }
         }
     }
+    return document.body.firstChild;
 }
 
 /*
@@ -48,7 +49,7 @@ export function generateTree(childrenCount, level) {
   Сформированное дерево верните в качестве результата работы функции.
 */
 export function replaceNodes() {
-    generateTree(3, 3);
+    generateTree(2, 3);
     for (let elem of document.querySelectorAll('div.item_2')) {
         let section = document.createElement('section');
         section.innerHTML = elem.innerHTML;
@@ -57,4 +58,5 @@ export function replaceNodes() {
     for (let elem of document.getElementsByTagName('section')) {
         elem.classList.add('item_2');
     }
+    return document.body.firstChild;
 }
